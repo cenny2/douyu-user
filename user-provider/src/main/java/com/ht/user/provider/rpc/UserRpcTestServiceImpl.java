@@ -1,4 +1,4 @@
-package com.ht.user.provider.service;
+package com.ht.user.provider.rpc;
 
 import com.ht.user.rpc.IUserRpcTest;
 import org.apache.dubbo.config.annotation.DubboService;
@@ -9,7 +9,7 @@ import org.apache.dubbo.config.annotation.DubboService;
  * @Author: Torrey
  * @Date: 2024/2/28 21:43
  **/
-@DubboService(group = "test")
+@DubboService
 public class UserRpcTestServiceImpl implements IUserRpcTest {
     @Override
     public String test() {

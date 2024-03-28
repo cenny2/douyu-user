@@ -1,0 +1,20 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.cenny</groupId>
+        <artifactId>douyu-user</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <artifactId>user-common-interface</artifactId>
+    <name>Archetype - user-common-interface</name>
+
+    <description>将一些共用组件存放在这里</description>
+    <url>http://maven.apache.org</url>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
+        </dependency>
+    </dependencies>
+</project>

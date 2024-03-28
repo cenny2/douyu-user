@@ -13,6 +13,7 @@
     <module>user-interface</module>
       <module>user-provider</module>
       <module>user-api</module>
+      <module>user-common-interface</module>
   </modules>
 
   <properties>
@@ -20,7 +21,6 @@
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
 
     <parent>
         <groupId>org.springframework.boot</groupId>

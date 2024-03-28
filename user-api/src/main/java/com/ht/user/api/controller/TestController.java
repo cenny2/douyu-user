@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 @RequestMapping("user")
 public class TestController {
-    @DubboReference(loadbalance = "")
+    @DubboReference
     private IUserRpcTest iUserRpcTest;
 
     @GetMapping("/test")
