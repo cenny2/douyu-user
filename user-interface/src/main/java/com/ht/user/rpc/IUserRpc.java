@@ -2,6 +2,9 @@ package com.ht.user.rpc;
 
 import com.ht.user.dto.UserDTO;
 
+import java.util.List;
+import java.util.Map;
+
 /**
  * @ClassName IUserRpcTest
  * @Description: TODO
@@ -11,6 +14,8 @@ import com.ht.user.dto.UserDTO;
 public interface IUserRpc {
 
     UserDTO selectById(Long userId);
+
+    Map<Long,UserDTO> batchQueryUserByUserIds(List<Long> userIds);
 
     boolean insertOne(UserDTO userDTO);
 

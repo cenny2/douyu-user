@@ -1,0 +1,2 @@
+com.ht.framework.redis.config.RedisConfig
+com.ht.framework.redis.config.key.UserProviderCacheKeyBuilder

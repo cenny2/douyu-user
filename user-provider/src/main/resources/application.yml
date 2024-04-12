@@ -2,3 +2,41 @@ spring:
   datasource:
     driver-class-name: org.apache.shardingsphere.driver.ShardingSphereDriver
     url: jdbc:shardingsphere:classpath:user-db-sharding.yaml
+    hikari:
+      pool-name: user-pool
+      minimum-idle: 15
+      maximum-pool-size: 300
+      idle-timeout: 60000
+      connection-timeout: 40000
+#      connection-init-sql: select 1
+      max-lifetime: 60000
+  application:
+    name: user-provider
+  data:
+    redis:
+      port: 63799
+      host: 127.0.0.1
+      lettuce:
+        pool:
+          min-idle: 10
+          max-active: 50
+          max-idle: 20
+      password: 123456
+ht:
+  mq:
+    consumer:
+      nameServer: 127.0.0.1:9876
+      groupName: ${spring.application.name}
+    producer:
+      nameServer: 127.0.0.1:9876
+      groupName: ${spring.application.name}
+      retryTimes: 3
+      sendTimeOut: 30000
+dubbo:
+  application:
+    name: ${spring.application.name}
+  registry:
+    address: nacos://192.168.149.1:8848?namespace=c3ca4e7b-10ec-4990-a494-acf5be82542d&&username=nacos&&password=nacos
+  protocol:
+    name: dubbo
+    port: 9097

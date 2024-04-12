@@ -7,9 +7,12 @@ import org.apache.dubbo.config.annotation.DubboReference;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.Date;
+import java.util.List;
+import java.util.Map;
 
 /**
  * @ClassName UserController
@@ -26,6 +29,11 @@ public class UserController {
     @GetMapping("/getUserInfo")
     public UserDTO getUserInfo(Long userId){
         return userRpc.selectById(userId);
+    }
+
+    @GetMapping("/batchQueryUserByUserIds")
+    public Map<Long, UserDTO> batchQueryUserByUserIds(@RequestParam List<Long> userIds){
+        return userRpc.batchQueryUserByUserIds(userIds);
     }
 
     @GetMapping("/insertOne")

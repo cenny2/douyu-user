@@ -1,16 +1,10 @@
 package com.ht.user.provider;
 
-import org.apache.catalina.User;
-import
-        org.apache.dubbo.config.spring.context.annotation.EnableDubbo;
+import org.apache.dubbo.config.spring.context.annotation.EnableDubbo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.WebApplicationType;
-import
-        org.springframework.boot.autoconfigure.SpringBootApplication;
-import
-        org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-
-import java.util.Scanner;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 /**
  * @ClassName UserProviderApplication

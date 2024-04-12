@@ -3,9 +3,11 @@ package com.ht.user.provider.rpc;
 import com.ht.user.dto.UserDTO;
 import com.ht.user.provider.service.IUserService;
 import com.ht.user.rpc.IUserRpc;
-import com.ht.user.rpc.IUserRpcTest;
 import jakarta.annotation.Resource;
 import org.apache.dubbo.config.annotation.DubboService;
+
+import java.util.List;
+import java.util.Map;
 
 /**
  * @ClassName UserRpcImpl
@@ -20,6 +22,11 @@ public class UserRpcImpl implements IUserRpc {
     @Override
     public UserDTO selectById(Long userId) {
         return userService.selectById(userId);
+    }
+
+    @Override
+    public Map<Long, UserDTO> batchQueryUserByUserIds(List<Long> userIds) {
+        return userService.batchQueryUserByUserIds(userIds);
     }
 
     @Override

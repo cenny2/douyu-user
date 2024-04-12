@@ -29,10 +29,35 @@
 
     <dependencies>
         <dependency>
+            <groupId>org.cenny</groupId>
+            <artifactId>user-interface</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.cenny</groupId>
+            <artifactId>user-common-interface</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.cenny</groupId>
+            <artifactId>douyu-framework-datasource-starter</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.cenny</groupId>
+            <artifactId>duyu-framework-redis-starter</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
             <groupId>org.apache.dubbo</groupId>
             <artifactId>dubbo-spring-boot-starter</artifactId>
             <version>3.2.0-beta.3</version>
         </dependency>
+
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
@@ -47,17 +72,7 @@
                 </exclusion>
             </exclusions>
         </dependency>
-        <dependency>
-            <groupId>org.cenny</groupId>
-            <artifactId>user-interface</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
 
-        <dependency>
-            <groupId>org.cenny</groupId>
-            <artifactId>user-common-interface</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
 <!--        ShardingJDBC相关依赖-->
         <dependency>
             <groupId>mysql</groupId>
@@ -76,11 +91,11 @@
             <artifactId>mybatis-plus-boot-starter</artifactId>
             <version>3.5.3</version>
         </dependency>
+
         <dependency>
-            <groupId>org.cenny</groupId>
-            <artifactId>user-common-interface</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <scope>compile</scope>
+            <groupId>org.apache.rocketmq</groupId>
+            <artifactId>rocketmq-client</artifactId>
+            <version>4.8.0</version>
         </dependency>
 
     </dependencies>
