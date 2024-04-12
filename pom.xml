@@ -15,6 +15,8 @@
       <module>user-api</module>
       <module>user-common-interface</module>
       <module>douyu-framework</module>
+      <module>id-generate-interface</module>
+      <module>id-generate-provider</module>
   </modules>
 
   <properties>

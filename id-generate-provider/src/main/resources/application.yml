@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: id-generate-provider
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    #访问主库
+    url: jdbc:mysql://127.0.0.1:8808/live_common?useUnicode=true&characterEncoding=utf8&allowPublicKeyRetrieval=true
+    username: root
+    password: root
+  dubbo:
+    application:
+      name: ${spring.application.name}
+    registry:
+      address:  nacos://192.168.149.1:8848?namespace=c3ca4e7b-10ec-4990-a494-acf5be82542d&&username=nacos&&password=nacos
+protocol:
+  name: dubbo
+  port: 9098

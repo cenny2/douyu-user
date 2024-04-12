@@ -5,6 +5,8 @@
       <directory url="file://$PROJECT_DIR$/src/main/resources/archetype-resources" includeSubdirectories="true" />
       <directory url="file://$PROJECT_DIR$/user-interface/src/main/resources/archetype-resources" includeSubdirectories="true" />
       <directory url="file://$PROJECT_DIR$/user-api/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/id-generate-interface/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/id-generate-provider/src/main/resources/archetype-resources" includeSubdirectories="true" />
     </excludeFromCompile>
     <annotationProcessing>
       <profile name="Maven default annotation processors profile" enabled="true">
@@ -12,14 +14,24 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="user-interface" />
-        <module name="user-provider" />
         <module name="user-api" />
+        <module name="duyu-framework-redis-starter" />
+        <module name="douyu-framework-datasource-starter" />
+        <module name="id-generate-provider" />
+        <module name="user-provider" />
+        <module name="user-common-interface" />
+        <module name="id-generate-interface" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="douyu-framework-datasource-starter" options="-parameters" />
+      <module name="duyu-framework-redis-starter" options="-parameters" />
+      <module name="id-generate-interface" options="-parameters" />
+      <module name="id-generate-provider" options="-parameters" />
       <module name="user-api" options="-parameters" />
+      <module name="user-common-interface" options="-parameters" />
       <module name="user-interface" options="-parameters" />
       <module name="user-provider" options="-parameters" />
     </option>
